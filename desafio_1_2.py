@@ -37,8 +37,8 @@ while(True):
         for data in datas:
             print(data, end=' | ')
         print('\nQuantidade por caracter:\n')
-        qtd = info.contar_caracteres()
-        for key in qtd:
-            print('%s -> %d' % (key, qtd[key]), end=' | ')
+        qtd = info.contar_caracteres().most_common()
+        for key, qtd in qtd:
+            print('%s -> %d' % (key, qtd), end=' | ')
     else:
         print('\nArquivo não encontrado\n')
